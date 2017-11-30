@@ -1,0 +1,66 @@
+body { 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1em;
+}
+section.flex-container {
+    position: relative;
+    border: 1px dashed #ccc;
+    height: 80vh;
+    width: 96vw;
+    transition: height 1.4s ease-out, width 1.4s ease-out;
+}
+    section.flex-container.expand {
+        min-height: 80vh;
+        min-width: 80vw;
+    }
+    section.flex-container.shrink {
+        height: 250px;
+        width: 400px;
+    }
+.guide {
+    position: absolute;
+    z-index: -1;
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+}
+    .guide>div {
+        flex-grow: 1;
+    }
+    .guide>.first-half {
+        background-color: #dee;
+    }
+    .guide>.second-half {
+        background-color: #eed;
+    }
+.target {
+    min-width: 100px;
+    min-height: 100px;
+    background-color:aquamarine;
+    border: 1px solid #ccc;
+    margin: 10px;
+    box-sizing: border-box;
+    font-size: 4em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .target.zombie { 
+        min-height: 200px;
+        background-image: url('../images/zombie-male.png');
+        color: #eee;
+    }
+    .target.goo {
+        background: url('../images/goo.png') no-repeat;
+        background-size: 100% 100%;
+        color: #eee;
+    }
+.control-container {
+    display: flex;
+    justify-content: space-between;
+}
+    .control-container>fieldset {
+        margin-top: 1em;
+        border: none;
+    }
