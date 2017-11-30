@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Zombies</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            .guide {
+                flex-direction: column;
+            }
+            .guide>.first-half {
+                border-bottom: 2px dashed #CCC;
+                /* border-right: 2px dashed #CCC; */
+            }
+            section.flex-container {
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+            }
+            .target {
+                flex-shrink: 1;
+            }
+            .target:nth-of-type(1) {
+                align-self: flex-end;
+                flex-grow: 2;
+            }
+            .target:nth-of-type(4) {
+                flex-grow: 1;
+            }
+
+        </style>
+    </head>
+    <body>
+        <section class="flex-container expand">
+            <div class="target goo">1</div>
+            <div class="target zombie">2</div>
+            <div class="target zombie">3</div>
+            <div class="target goo">4</div>
+            <div class="guide">
+                <div class="first-half"></div>
+                <div class="second-half"></div>
+            </div>
+        </section>
+    </body>
+</html>
