@@ -13,13 +13,20 @@
                 border-bottom: 2px dashed #F99
                 /* border-right: 2px dashed #CCC; */
             }
+            section.flex-container.shrink {
+                width: 240px;
+            }
             section.flex-container {
                 display: flex;
+                justify-content: flex-end;
                 align-items: center;
                 flex-wrap: wrap;
             }
             .target.goo {
                 flex-grow: 1;
+            }
+            .target:nth-of-type(3) {
+                flex-grow: 0;
             }
         </style>
     </head>
@@ -28,7 +35,6 @@
             <div class="target goo">1</div>
             <div class="target goo">2</div>
             <div class="target goo">3</div>
-            <div class="target goo">4</div>
             <div class="guide">
                 <div class="first-half"></div>
                 <div class="second-half"></div>
@@ -42,6 +48,8 @@
                 <dd><code>flex-wrap: wrap</code></dd>
                 <dt>.target.goo</dt>
                 <dd><code>flex-grow: 1</code></dd>
+                <dt>.target:nth-of-type(3)</dt>
+                <dd><code>flex-grow: 0;</code></dd>
             </dl>
             <fieldset class="controls">
                 <label for="shrink">shrink container</label>

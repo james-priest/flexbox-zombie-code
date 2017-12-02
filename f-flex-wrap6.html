@@ -6,20 +6,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
         <style>
-            .guide {
+            /* .guide {
                 flex-direction: column;
-            }
+            } */
             .guide>.first-half {
-                border-bottom: 2px dashed #F99
-                /* border-right: 2px dashed #CCC; */
+                /* border-bottom: 2px dashed #F99 */
+                border-right: 2px dashed #F99;
+            }
+            section.flex-container.shrink {
+                width: 240px;
             }
             section.flex-container {
                 display: flex;
+                flex-direction: column-reverse;
                 align-items: center;
                 flex-wrap: wrap;
-            }
-            .target.goo {
-                flex-grow: 1;
             }
         </style>
     </head>
@@ -28,7 +29,6 @@
             <div class="target goo">1</div>
             <div class="target goo">2</div>
             <div class="target goo">3</div>
-            <div class="target goo">4</div>
             <div class="guide">
                 <div class="first-half"></div>
                 <div class="second-half"></div>
@@ -37,11 +37,9 @@
         <div class="control-container">
             <dl class="legend">
                 <dt>.flex-container</dt>
-                <dd><code>flex-direction: row</code></dd>
+                <dd><code>flex-direction: column-reverse</code></dd>
                 <dd><code>align-items: center</code></dd>
                 <dd><code>flex-wrap: wrap</code></dd>
-                <dt>.target.goo</dt>
-                <dd><code>flex-grow: 1</code></dd>
             </dl>
             <fieldset class="controls">
                 <label for="shrink">shrink container</label>

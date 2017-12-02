@@ -10,16 +10,20 @@
                 flex-direction: column;
             }
             .guide>.first-half {
-                border-bottom: 2px dashed #F99
-                /* border-right: 2px dashed #CCC; */
+                border-bottom: 2px dashed #F99;
+                /* border-right: 2px dashed #F99; */
+            }
+            section.flex-container.shrink {
+                /* width: 240px; */
+                height: 350px;
             }
             section.flex-container {
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
                 flex-wrap: wrap;
             }
-            .target.goo {
-                flex-grow: 1;
+            .target:nth-of-type(2) {
+                align-self: flex-end;
             }
         </style>
     </head>
@@ -37,11 +41,10 @@
         <div class="control-container">
             <dl class="legend">
                 <dt>.flex-container</dt>
-                <dd><code>flex-direction: row</code></dd>
-                <dd><code>align-items: center</code></dd>
+                <dd><code>align-items: flex-start</code></dd>
                 <dd><code>flex-wrap: wrap</code></dd>
-                <dt>.target.goo</dt>
-                <dd><code>flex-grow: 1</code></dd>
+                <dt>.target:nth-of-type(2)</dt>
+                <dd><code>align-self: flex-end</code></dd>
             </dl>
             <fieldset class="controls">
                 <label for="shrink">shrink container</label>

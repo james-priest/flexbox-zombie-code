@@ -34,11 +34,11 @@ section.flex-container {
         background-color: #eed;
     }
 .target {
-    min-width: 100px;
-    min-height: 100px;
+    width: 100px;
+    height: 100px;
     background-color:aquamarine;
     border: 1px solid #ccc;
-    margin: 10px;
+    margin: .6rem;
     box-sizing: border-box;
     font-size: 4em;
 
@@ -47,7 +47,7 @@ section.flex-container {
     align-items: center;
 }
     .target.zombie { 
-        min-height: 200px;
+        height: 200px;
         background-image: url('../images/zombie-male.png');
         color: #eee;
     }

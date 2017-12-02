@@ -6,29 +6,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
         <style>
-            .guide {
+            /* .guide { 
                 flex-direction: column;
-            }
+            } */
             .guide>.first-half {
-                border-bottom: 2px dashed #F99
-                /* border-right: 2px dashed #CCC; */
+                /* border-bottom: 2px dashed #F99; */
+                border-right: 2px dashed #F99;
+            }
+            section.flex-container {
+                width: 400px;
+                height: 400px;
+            }
+            section.flex-container.shrink {
+                width: 400px;
+                height: 150px;
             }
             section.flex-container {
                 display: flex;
+                flex-direction: column;
+                justify-content: center;
                 align-items: center;
                 flex-wrap: wrap;
             }
-            .target.goo {
-                flex-grow: 1;
+            .target {
+                margin: 0;
             }
         </style>
     </head>
     <body>
         <section class="flex-container" id="fc">
-            <div class="target goo">1</div>
-            <div class="target goo">2</div>
-            <div class="target goo">3</div>
-            <div class="target goo">4</div>
+            <div class="target">1</div>
+            <div class="target">2</div>
             <div class="guide">
                 <div class="first-half"></div>
                 <div class="second-half"></div>
@@ -37,11 +45,13 @@
         <div class="control-container">
             <dl class="legend">
                 <dt>.flex-container</dt>
-                <dd><code>flex-direction: row</code></dd>
+                <dd><code>flex-direction: column</code></dd>
+                <dd><code>justify-content: center</code></dd>
                 <dd><code>align-items: center</code></dd>
                 <dd><code>flex-wrap: wrap</code></dd>
-                <dt>.target.goo</dt>
-                <dd><code>flex-grow: 1</code></dd>
+                <dt>.target</dt>
+                <dd><code>margin: 0</code></dd>
+                <!-- <code><code>flex-basis: 44%</code></dd> -->
             </dl>
             <fieldset class="controls">
                 <label for="shrink">shrink container</label>
