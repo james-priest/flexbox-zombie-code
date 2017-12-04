@@ -6,13 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
         <style>
-            .guide {
-                flex-direction: column;
-            }
-            .guide>.first-half {
-                border-bottom: 2px dashed #F99
-                /* border-right: 2px dashed #CCC; */
-            }
             section.flex-container {
                 display: flex;
                 align-items: center;
@@ -24,12 +17,12 @@
         </style>
     </head>
     <body>
-        <section class="flex-container" id="fc">
+        <section class="flex-container">
             <div class="target goo">1</div>
             <div class="target goo">2</div>
             <div class="target goo">3</div>
             <div class="target goo">4</div>
-            <div class="guide">
+            <div class="guide row">
                 <div class="first-half"></div>
                 <div class="second-half"></div>
             </div>
@@ -37,7 +30,6 @@
         <div class="control-container">
             <dl class="legend">
                 <dt>.flex-container</dt>
-                <dd><code>flex-direction: row</code></dd>
                 <dd><code>align-items: center</code></dd>
                 <dd><code>flex-wrap: wrap</code></dd>
                 <dt>.target.goo</dt>
