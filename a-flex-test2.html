@@ -4,41 +4,46 @@
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <link href="css/style.css" rel="stylesheet">
         <style>
-            section {
-                border: 1px dashed #ccc;
-                min-height: 96vh;
-                min-width: 80vw;
-                
+            section.flex-container {
                 display:flex;
                 flex-direction: column-reverse;
                 justify-content: space-between;
                 align-items: flex-end;
             }
-            div {
-                width: 100px;
-                height: 100px;
-                background-color:aquamarine;
-                border: 1px solid #ccc;
-                margin: 10px;
-            }
-            div:nth-child(3) {
+            .target:nth-child(3) {
                 align-self: center;
             }
-            div:nth-of-type(2n) {
+            .target:nth-of-type(2n) {
+                background-color: #fdf;
                 align-self: flex-start;
             }
         </style>
     </head>
     <body>
-        <section>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+        <section class="flex-container">
+            <div class="target">1</div>
+            <div class="target">2</div>
+            <div class="target">3</div>
+            <div class="target">4</div>
+            <div class="target">5</div>
+            <div class="guide row">
+                <div class="first-half"></div>
+                <div class="second-half"></div>
+            </div>
         </section>
-        
+        <div class="control-container">
+            <dl class="legend">
+                <dt>.flex-container</dt>
+                <dd><code>flex-direction: column-reverse</code></dd>
+                <dd><code>justify-content: space-between</code></dd>
+                <dd><code>align-items: flex-end</code></dd>
+                <dt>.target.nth-child(3)</dt>
+                <dd><code>align-self: center</code></dd>
+                <dt>.target:nth-of-type(2n)</dt>
+                <dd><code>align-self: flex-start</code></dd>
+            </dl>
+        </div>
     </body>
 </html>
