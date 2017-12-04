@@ -6,21 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
         <style>
-            .guide { 
-                flex-direction: column;
-            }
-            .guide>.first-half {
-                border-bottom: 2px dashed #F99;
-                /* border-right: 2px dashed #F99; */
-            }
             section.flex-container {
                 height: 380px;
-                /* width: 360px; */
             }
             section.flex-container.shrink {
                 height: 380px;
                 width: 360px;
-                /* flex-wrap: nowrap; */
             }
             section.flex-container {
                 display: flex;
@@ -33,14 +24,14 @@
         </style>
     </head>
     <body>
-        <section class="flex-container" id="fc">
+        <section class="flex-container">
             <div class="target goo">1</div>
             <div class="target goo">2</div>
             <div class="target goo">3</div>
             <div class="target goo">4</div>
             <div class="target goo">5</div>
             <div class="target goo">6</div>
-            <div class="guide">
+            <div class="guide row">
                 <div class="first-half"></div>
                 <div class="second-half"></div>
             </div>
@@ -52,7 +43,6 @@
                 <dd><code><b>align-content: flex-end</b></code></dd>
                 <dt>.target</dt>
                 <dd><code>margin: 0</code></dd>
-                <!-- <code><code>flex-basis: 44%</code></dd> -->
             </dl>
             <fieldset class="controls">
                 <label for="shrink">toggle shrink</label>
