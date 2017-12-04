@@ -5,7 +5,7 @@ body {
 section.flex-container {
     position: relative;
     border: 1px dashed #ccc;
-    height: 80vh;
+    height: 75vh;
     width: 96vw;
     transition: height 1.4s ease-out, width 1.4s ease-out;
 }
@@ -26,6 +26,18 @@ section.flex-container {
 }
     .guide>div {
         flex-grow: 1;
+    }
+    .guide.row {
+        flex-direction: column;
+    }
+    .guide.column {
+        flex-direction: row;
+    }
+    .guide.row>.first-half {
+        border-bottom: 2px dashed #F99;
+    }
+    .guide.column>.first-half {
+        border-right: 2px dashed #F99;
     }
     .guide>.first-half {
         background-color: #dee;
@@ -55,6 +67,12 @@ section.flex-container {
         background: url('../images/goo.png') no-repeat;
         background-size: 100% 100%;
         color: #eee;
+    }
+    .target.dave {
+        height: 200px;
+        width: 150px;
+        color: #eee;
+        background-color: #c33
     }
 .control-container {
     display: flex;
