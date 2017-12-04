@@ -6,41 +6,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
         <style>
-            /* .guide {
-                flex-direction: column;
-            } */
-            .guide>.first-half {
-                /* border-bottom: 2px dashed #CCC; */
-                border-right: 2px dashed #CCC;
-            }
             section.flex-container {
                 display: flex;
                 flex-direction: column-reverse;
                 justify-content: center;
                 align-items: center;
             }
-            .target.goo1 {
+            .target.block {
                 order: -1;
                 align-self:stretch;
+                width: auto;
             }
-
         </style>
     </head>
     <body>
         <section class="flex-container expand">
             <div class="target zombie">1</div>
-            <div class="target goo1">2</div>
-            <div class="target goo1">3</div>
-            <div class="guide">
+            <div class="target block">2</div>
+            <div class="target block">3</div>
+            <div class="guide column">
                 <div class="first-half"></div>
                 <div class="second-half"></div>
             </div>
         </section>
         <dl>
             <dt>.flex-container</dt>
-            <dd><code>flex-direction: row</code></dd>
-            <dt>.zombie</dt>
-            <dd><code>order: 2</code></dd>
+            <dd><code>flex-direction: column-reverse</code></dd>
+            <dd><code>justify-content: center</code></dd>
+            <dd><code>align-items: center</code></dd>
+            <dt>.target.block</dt>
+            <dd><code>order: -1</code></dd>
+            <dd><code>align-self: stretch</code></dd>
+            <dd><code>width: auto</code></dd>
         </dl>
     </body>
 </html>
