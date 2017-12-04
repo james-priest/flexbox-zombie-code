@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Zombies</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            section.flex-container {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="flex-container">
+            <div class="target zombie">1</div>
+            <div class="target zombie">2</div>
+            <div class="target goo">3</div>
+            <div class="guide row">
+                <div class="first-half"></div>
+                <div class="second-half"></div>
+            </div>
+        </section>
+        <div class="control-container">
+            <dl class="legend">
+                <dt>.flex-container</dt>
+                <dd><code>flex-flow: row-reverse wrap</code></dd>
+                <dd><code>justify-content: center</code></dd>
+                <dd><code>align-items: center</code></dd>
+            </dl>
+            <fieldset class="controls">
+                <label for="shrink">toggle shrink</label>
+                <input type="checkbox" name="shrink" id="shrink">
+            </fieldset>
+        </div>
+        <script>
+            window.onload = function() {
+                // Look ma, [very little] Javascript!
+                document.querySelector('#shrink').addEventListener('click', function() {
+                    document.querySelector('.flex-container').classList.toggle('shrink');
+                });
+            }
+        </script>
+    </body>
+</html>

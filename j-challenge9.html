@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Zombies</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            section.flex-container {
+                height: 300px;
+                /* width: 500px; */
+            }
+            section.flex-container.shrink {
+                height: 300px;
+                width: 350px;
+            }
+            section.flex-container {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .target.dave {
+                order: 1;
+                align-self: flex-start;
+            }
+            .target.goo {
+                align-self: flex-end;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="flex-container">
+                <div class="target zombie">1</div>
+                <div class="target zombie">2</div>
+                <div class="target dave">3</div>
+                <div class="target goo">4</div>
+                
+            <div class="guide row">
+                <div class="first-half"></div>
+                <div class="second-half"></div>
+            </div>
+        </section>
+        <div class="control-container">
+            <dl class="legend">
+                <dt>.flex-container</dt>
+                <dd><code>justify-content: space-around</code></dd>
+                <dd><code>align-items: center</code></dd>
+                <dt>.target.dave</dt>
+                <dd><code>order: 1</code></dd>
+                <dd><code>align-self: flex-start</code></dd>
+                <dt>.target.goo</dt>
+                <dd><code>align-self: flex-end</code></dd>
+            </dl>
+            <fieldset class="controls">
+                <label for="shrink">toggle shrink</label>
+                <input type="checkbox" name="shrink" id="shrink">
+            </fieldset>
+        </div>
+        <script>
+            window.onload = function() {
+                // Look ma, [very little] Javascript!
+                document.querySelector('#shrink').addEventListener('click', function() {
+                    document.querySelector('.flex-container').classList.toggle('shrink');
+                });
+            }
+        </script>
+    </body>
+</html>
