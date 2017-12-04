@@ -6,13 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
         <style>
-            .guide { 
-                flex-direction: column;
-            }
-            .guide>.first-half {
-                border-bottom: 2px dashed #F99;
-                /* border-right: 2px dashed #F99; */
-            }
             section.flex-container {
                 height: 300px;
                 width: 500px;
@@ -26,16 +19,15 @@
                 flex-flow: row-reverse wrap;
                 align-content: center;
             }
-            
         </style>
     </head>
     <body>
-        <section class="flex-container" id="fc">
+        <section class="flex-container">
             <div class="target goo">1</div>
             <div class="target goo">2</div>
             <div class="target goo">3</div>
             <div class="target goo">4</div>
-            <div class="guide">
+            <div class="guide row">
                 <div class="first-half"></div>
                 <div class="second-half"></div>
             </div>
