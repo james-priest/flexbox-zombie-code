@@ -4,48 +4,43 @@
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <link href="css/style.css" rel="stylesheet">
         <style>
-            body { 
-                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                font-size: 4em;
-            }
-            section {
-                border: 1px dashed #ccc;
-                min-height: 80vh;
-                min-width: 80vw;
-                
+            section.flex-container  {
                 display:flex;
                 align-items: flex-end;
             }
-            div {
-                width: 100px;
-                height: 100px;
-                background-color:aquamarine;
-                border: 1px solid #ccc;
-                margin: 10px;
-                box-sizing: border-box;
-
-                display: flex;
-                justify-content: center;
-                align-items: center
-            }
-            div:nth-of-type(1n) {
+            .target:nth-of-type(2n+1) {
                 flex-grow: 1;
+                background-color: #fdf;
             }
-            div:nth-child(2) {
+            .target:nth-child(2) {
                 align-self: flex-start;
                 flex-grow: 0;
             }
-            
         </style>
     </head>
     <body>
-        <section>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
+        <section class="flex-container">
+            <div class="target">1</div>
+            <div class="target">2</div>
+            <div class="target">3</div>
+            <div class="guide row">
+                <div class="first-half"></div>
+                <div class="second-half"></div>
+            </div>
         </section>
-        
+        <div class="control-container">
+            <dl class="legend">
+                <dt>.flex-container</dt>
+                <dd><code>align-items: flex-end</code></dd>
+                <dt>.target:nth-of-type(2n+1)</dt>
+                <dd><code>flex-grow: 1</code></dd>
+                <dd><code>background-color: #fdf</code></dd>
+                <dt>.target:nth-of-child(2)</dt>
+                <dd><code>align-self: flex-start</code></dd>
+                <dd><code>flex-grow: 0</code></dd>
+            </dl>
+        </div>
     </body>
 </html>

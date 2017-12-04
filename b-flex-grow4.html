@@ -6,13 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
         <style>
-            /* .guide {
-                flex-direction: column;
-            } */
-            .guide>.first-half {
-                /* border-bottom: 2px dashed #CCC; */
-                border-right: 2px dashed #CCC;
-            }
             section.flex-container {
                 display: flex;
                 flex-direction: column;
@@ -30,10 +23,20 @@
             <div class="target goo">1</div>
             <div class="target">2</div>
             <div class="target goo">3</div>
-            <div class="guide">
+            <div class="guide column">
                 <div class="first-half"></div>
                 <div class="second-half"></div>
             </div>
         </section>
+        <div class="control-container">
+            <dl class="legend">
+                <dt>.flex-container</dt>
+                <dd><code>flex-direction: column</code></dd>
+                <dd><code>align-items: flex-end</code></dd>
+                <dt>.target:nth-of-type(2)</dt>
+                <dd><code>align-self: stretch</code></dd>
+                <dd><code>flex-grow: 1</code></dd>
+            </dl>
+        </div>
     </body>
 </html>
