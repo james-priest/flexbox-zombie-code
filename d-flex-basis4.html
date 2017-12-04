@@ -6,19 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
         <style>
-            .guide {
-                flex-direction: column;
-            }
-            .guide>.first-half {
-                border-bottom: 2px dashed #CCC;
-                /* border-right: 2px dashed #CCC; */
-            }
             section.flex-container {
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
-            .target.goo1 {
+            .target.block {
                 flex-basis: 50%; 
             }
             .target:nth-of-type(3) {
@@ -28,13 +21,24 @@
     </head>
     <body>
         <section class="flex-container expand">
-            <div class="target">1</div>
+            <div class="target block">1</div>
             <div class="target zombie">2</div>
-            <div class="target">3</div>
-            <div class="guide">
+            <div class="target block">3</div>
+            <div class="guide row">
                 <div class="first-half"></div>
                 <div class="second-half"></div>
             </div>
         </section>
+        <div class="control-container">
+            <dl class="legend">
+                <dt>.flex-container</dt>
+                <dd><code>justify-content: center</code></dd>
+                <dd><code>align-items: center</code></dd>
+                <dt>.target.block</dt>
+                <dd><code>flex-basis: 50%</code></dd>
+                <dt>.target:nth-of-type(3)</dt>
+                <dd><code>align-self: stretch</code></dd>
+            </dl>
+        </div>
     </body>
 </html>
